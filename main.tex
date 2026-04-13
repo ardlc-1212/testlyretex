@@ -1,0 +1,124 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- Typography & Styling ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgheros} % Sleek, modern sans-serif font
+\renewcommand{\familydefault}{\sfdefault} % Sets sans-serif as default
+\usepackage[parfill]{parskip} % Removes paragraph indentation, adds space between paragraphs
+
+% --- Layout & Margins ---
+\usepackage[margin=2.5cm]{geometry} % Clean, wide margins
+\usepackage{fancyhdr} % Custom headers and footers
+\usepackage{multicol} % For multi-column layouts
+
+% --- Graphics & Colors ---
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float} % Better image positioning
+
+% Define custom sleek colors
+\definecolor{TechBlue}{HTML}{0A2540} % Dark, professional navy
+\definecolor{AccentBlue}{HTML}{0066FF} % Bright tech accent
+\definecolor{SlateGray}{HTML}{546E7A}
+
+% --- Custom Headings ---
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{TechBlue}}{}{0em}{}[\vspace{-0.2cm}\rule{\textwidth}{0.5pt}]
+\titleformat{\subsection}{\large\bfseries\color{SlateGray}}{}{0em}{}
+
+% --- Hyperlinks ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=TechBlue,
+    urlcolor=AccentBlue,
+    pdfborder={0 0 0} % Removes ugly boxes around links
+}
+
+% --- Header & Footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{SlateGray}{\small VitraJet}}
+\fancyhead[R]{\textcolor{SlateGray}{\small I3P Incubation Proposal}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % Removes default header line
+
+\begin{document}
+
+% --- Custom Sleek Title Block ---
+\begin{flushleft}
+    {\Huge \textbf{\textcolor{TechBlue}{NAMENAME}}} \\[0.3cm]
+    {\Large \textcolor{SlateGray}{Industrial Scale Glass Printing}} \\[0.5cm]
+    \textbf{Founders:} Arda Alici \& Aleksandar Janev \\
+    \textbf{Target Incubator:} I3P, Politecnico di Torino \\
+    \textbf{Date:} \today
+\end{flushleft}
+\vspace{0.8cm}
+
+% --- Section: Overview ---
+\section*{Project Overview}
+
+\subsection*{The Market Opportunity \& Solution}
+The tourist souvenir market is driven by high demand for customized, premium products. However, producing these items—especially on short notice—is often difficult, slow, and results in high costs for the end-user.
+
+We solve this bottleneck with a proprietary printing machine capable of rapid, high-quality production using low-cost ink. Crucially, our system allows for the ink to be cleaned and the medium to be reused, drastically reducing waste and overhead for unsold inventory.
+
+\subsection*{Current Traction \& Target Market}
+Our technology is already proven. We currently have multiple operational models working across different locations in Türkiye. We have identified a massive, untapped market opportunity—specifically in highly touristic countries like Italy—where this specific, low-footprint technology is not yet being utilized.
+
+\subsection*{The Technology}
+Our machines utilize widely available, off-the-shelf UV printing technology, combined with key proprietary modifications to maximize performance for our specific applications. It uses mass-manufactured, readily available commercial inks.
+
+\begin{itemize}
+    \item \textbf{Scalable Print Areas:} Our designs range from 33x50 cm up to 70x100 cm, with the architecture capable of scaling larger if needed.
+    \item \textbf{Production Speed:} Our top-performing 70x100 cm variant (a 7,000 cm$^2$ print bed) completes a full job in just 25 minutes.
+    \item \textbf{High Capacity:} A single 70x100 cm print bed can hold roughly 60 round glasses (10 cm diameter) per run.
+    \item \textbf{Industrial Durability:} The system is modularly designed using heavy-duty sigma beams, ballscrews, and linear rails, rated to operate reliably for nearly a decade.
+\end{itemize}
+
+\subsection*{Hardware Economics \& Maintenance}
+\begin{itemize}
+    \item \textbf{Manufacturing Cost:} Roughly €3,000 in materials for the 70x100 cm variant (pending deeper supply chain analysis).
+    \item \textbf{Target Retail Price:} 5-figures (e.g., €10,000+), yielding excellent hardware margins.
+    \item \textbf{Maintenance:} The primary consumable is the print head. It requires replacement every 6–12 months (depending on usage). Replacement heads cost roughly €300.
+\end{itemize}
+
+\subsection*{Operational Workflow}
+A single operator can easily manage one machine. The workflow consists of a 35-minute total pass time:
+
+\begin{itemize}
+    \item \textbf{10 Minutes (Downtime):} Placing glass (approx. 5 seconds per piece), removing finished products, and queuing the next job.
+    \item \textbf{25 Minutes (Active):} Machine printing.
+\end{itemize}
+
+\textit{Note on Design:} Print preparation is ideally offloaded to a secondary worker or the client, but operators can easily use pre-made templates and scripts to format 60 different pictures onto a single print bed.
+
+\subsection*{Unit Economics \& Daily ROI}
+The cost per unit scales based on the desired end product. However, assuming a standard 10x10 cm square cut from 6mm glass (approx. €30 per square meter):
+
+\begin{itemize}
+    \item \textbf{Raw Material Cost:} \textasciitilde€0.30 per piece (100 pieces per square meter).
+    \item \textbf{Finished Base Cost:} \textasciitilde€1.00 per piece (including corner rounding, decor cuts, etc.).
+\end{itemize}
+
+\textbf{Daily Production Capacity (7-hour shift):}
+11 total passes (35 mins each) = 660 pieces produced per day.
+
+\textbf{Profitability Projections:}
+\begin{itemize}
+    \item \textbf{Best Case (100\% Sell-Through):} Assuming a conservative unit cost of €3.00 (inclusive of overhead) and a retail price of €7.00, selling all 660 pieces yields a daily profit of €2,640.
+    \item \textbf{Conservative Case (10\% Sell-Through):} Even if only 1 in 10 customers buys a product (66 pieces sold), the financial risk is mitigated because the unsold glass is reusable. Factoring in the lost ink costs (\textit{[Insert precise ink cost per piece here] cents}), the machine still generates roughly €100 in net profit per day.
+    \item \textbf{Payback Period:} At €100/day in net profit, the €10,000 cost of the machine is fully paid off within its first year of operation.
+\end{itemize}
+
+\subsection*{Current Needs \& Roadmap}
+The system is highly profitable and proven to work. To scale, we are seeking incubation and funding to assist with:
+\begin{enumerate}
+    \item Certifications for Commercialisation (CE, FCC etc.)
+    \item Capital for scaled manufacturing.
+    \item In-depth European market research.
+    \item Supply chain cost optimization to maximize profit margins. (Note: Given our modular design and ease of assembly, current low-volume manufacturing costs are already highly favorable, making this a secondary priority).
+\end{enumerate}
+
+\end{document}
